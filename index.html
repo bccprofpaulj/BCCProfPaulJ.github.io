@@ -5,61 +5,133 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Paul Jaijairam | Professor & Academic Leader</title>
   <meta name="description" content="Paul Jaijairam — Professor, Department of Business & Information Systems, Bronx Community College (CUNY)." />
+
   <style>
-    :root { --bg:#f5f7fb; --card:#ffffff; --text:#1f2937; --muted:#4b5563; --link:#1d4ed8; --line:#e5e7eb; }
+    /* ===== Soft Blue / Bright Academic Theme ===== */
+    :root {
+      --bg:#eef2ff;
+      --card:#ffffff;
+      --text:#1e293b;
+      --muted:#475569;
+      --link:#2563eb;
+      --line:#c7d2fe;
+    }
+
     *{ box-sizing:border-box; }
+
     body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #f9fafb 0%, var(--bg) 100%);
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #f0f4ff 0%, var(--bg) 100%);
       color:var(--text);
     }
+
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
+
     .wrap{ max-width:980px; margin:0 auto; padding:42px 18px 64px; }
-    header{ display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
     .name{ font-size:34px; line-height:1.1; margin:0; letter-spacing:.2px; }
     .tag{ margin:10px 0 0; color:var(--muted); font-size:16px; }
+
     .toplinks{ display:flex; gap:14px; flex-wrap:wrap; }
+
     .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px; border:1px solid var(--line); border-radius:999px;
-      background: rgba(18,26,39,.75);
+      display:inline-flex;
+      align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#f8fafc;
     }
-    .grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; margin-top:22px; }
-    @media (max-width: 840px){ .grid{ grid-template-columns:1fr; } }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:22px;
+    }
+
+    @media (max-width: 840px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
     .card{
-      border:1px solid var(--line); background: rgba(18,26,39,.78);
-      border-radius:16px; padding:18px 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:16px;
+      padding:18px 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.08);
     }
+
     h2{ margin:0 0 10px; font-size:18px; letter-spacing:.2px; }
     p{ margin:0 0 12px; color:var(--muted); line-height:1.55; }
-    ul{ margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.55; }
-    li{ margin:6px 0; }
-    .kvs{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px; }
-    .kv{ border:1px solid var(--line); border-radius:14px; padding:12px; background: rgba(11,15,23,.35); }
-    .kv b{ display:block; margin-bottom:6px; color:var(--text); font-size:13px; }
-    .kv span{ color:var(--muted); font-size:14px; }
-    footer{ margin-top:22px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:16px; }
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px; border-radius:12px;
-      border:1px solid var(--line); background: rgba(11,15,23,.35);
-      color:var(--text);
-    }
-    .btn:hover{ background: rgba(11,15,23,.6); text-decoration:none; }
-    .small{ font-size:13px; }
 
-    /* NEW: vertical Focus list (no bullets) */
+    ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+    li{ margin:6px 0; }
+
+    .kvs{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .kv{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      background:#f9fafb;
+    }
+
+    .kv b{ display:block; margin-bottom:6px; font-size:13px; color:var(--text); }
+    .kv span{ font-size:14px; color:var(--muted); }
+
     .focuslist{
       display:flex;
       flex-direction:column;
       gap:3px;
-      color:var(--muted);
       font-size:14px;
+      color:var(--muted);
       line-height:1.25;
     }
+
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#ffffff;
+      color:var(--text);
+    }
+    .btn:hover{ background:#f1f5f9; text-decoration:none; }
+
+    .small{ font-size:13px; }
   </style>
 </head>
 
@@ -100,10 +172,9 @@
       <aside class="card">
         <h2>Quick facts</h2>
         <div class="kvs">
-          <div class="kv"><b>Role</b><span>Professor & Accounting Coordinator</span></div>
+          <div class="kv"><b>Role</b><span>Professor</span></div>
           <div class="kv"><b>Institution</b><span>Bronx Community College (CUNY)</span></div>
 
-          <!-- UPDATED Focus block (vertical, no bullets) -->
           <div class="kv">
             <b>Focus</b>
             <span class="focuslist">
@@ -145,9 +216,7 @@
         </p>
         <p class="small">
           — From the BCC announcement of the inaugural “Full Circle” Award.
-          <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">
-            Source
-          </a>
+          <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">Source</a>
         </p>
       </div>
     </section>
@@ -251,9 +320,9 @@
         <h2>Professional Development</h2>
         <ul>
           <li>Annual completion of 40 hours of Continuing Professional Education (CPE)</li>
-          <li>Federal Reserve Bank of New York Student's Visits</li>
-          <li>ACBSP Conferences</li>
-          <li>ACBSP Report Submissions</li>
+          <li>Federal Reserve Bank of New York tours (coordinated/attended)</li>
+          <li>ACBSP conferences (attended)</li>
+          <li>ACBSP reports (assisted with preparation)</li>
         </ul>
       </div>
     </section>
