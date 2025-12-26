@@ -50,6 +50,16 @@
     }
     .btn:hover{ background: rgba(11,15,23,.6); text-decoration:none; }
     .small{ font-size:13px; }
+
+    /* NEW: vertical Focus list (no bullets) */
+    .focuslist{
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.25;
+    }
   </style>
 </head>
 
@@ -58,7 +68,7 @@
     <header>
       <div>
         <h1 class="name">Paul Jaijairam</h1>
-        <div class="tag">Professor • Business & Information Systems • Bronx Community College (CUNY)</div>
+        <div class="tag">Professor • Business &amp; Information Systems • Bronx Community College (CUNY)</div>
       </div>
       <nav class="toplinks">
         <a class="btn" href="https://www.linkedin.com/in/pauljaijairam/" target="_blank" rel="noopener">View LinkedIn</a>
@@ -72,7 +82,7 @@
       <div class="card">
         <h2>About</h2>
         <p>
-          I’m a professor in the Department of Business & Information Systems at Bronx Community College (CUNY).
+          I’m a professor in the Department of Business &amp; Information Systems at Bronx Community College (CUNY).
           My work focuses on student success, curriculum design, program assessment, and career-aligned pathways.
         </p>
         <p>
@@ -93,14 +103,14 @@
           <div class="kv"><b>Role</b><span>Professor</span></div>
           <div class="kv"><b>Institution</b><span>Bronx Community College (CUNY)</span></div>
 
-          <!-- UPDATED FOCUS -->
+          <!-- UPDATED Focus block (vertical, no bullets) -->
           <div class="kv">
             <b>Focus</b>
-            <span>
-              Student success<br>
-              Curriculum design<br>
-              Program assessment<br>
-              Career-aligned pathways
+            <span class="focuslist">
+              <span>Student Success</span>
+              <span>Curriculum Design</span>
+              <span>Program Assessment</span>
+              <span>Career-Aligned Pathways</span>
             </span>
           </div>
 
@@ -112,7 +122,161 @@
       </aside>
     </section>
 
-    <!-- everything else in your file remains unchanged -->
+    <!-- ===== News & Recognition ===== -->
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>News &amp; Recognition</h2>
+        <ul>
+          <li>
+            <b>Inaugural Alumni “Full Circle” Award</b> — Bronx Community College (CUNY), <b>November 20, 2025</b>.<br />
+            Recognized for 33 years of dedicated service to the Department of Business &amp; Information Systems and a lifelong commitment to helping students succeed.
+            <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">
+              Read the BCC story
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Featured Quote</h2>
+        <p>
+          “I started where you are now – at Bronx Community College – and it changed my life.
+          What you choose to do here has the power to change yours too.”
+        </p>
+        <p class="small">
+          — From the BCC announcement of the inaugural “Full Circle” Award.
+          <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">
+            Source
+          </a>
+        </p>
+      </div>
+    </section>
+    <!-- ===== End News & Recognition ===== -->
+
+    <!-- ===== CV Sections ===== -->
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>Education</h2>
+        <ul>
+          <li><b>MBA, Finance</b> — Manhattan College</li>
+          <li><b>BS, Accounting</b> — Herbert H. Lehman College</li>
+          <li><b>AS, Business Administration</b> — Bronx Community College</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Licensure</h2>
+        <ul>
+          <li><b>Certified Public Accountant (CPA)</b></li>
+        </ul>
+
+        <h2 style="margin-top:14px;">Professional Memberships</h2>
+        <ul>
+          <li>New York State Society of Certified Public Accountants</li>
+          <li>National Business Education Association</li>
+          <li>Accreditation Council for Business Schools and Programs (ACBSP)</li>
+          <li>American Association of Community Colleges (AACC)</li>
+        </ul>
+
+        <div class="btnrow" style="margin-top:12px;">
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download Full CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>Academic Experience</h2>
+        <ul>
+          <li>Bronx Community College (CUNY) — <b>Associate Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Assistant Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Adjunct Assistant Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Adjunct Lecturer</b>, Business &amp; Information Systems</li>
+          <li>Bronx Community College (CUNY) — <b>Adjunct Lecturer</b>, Mathematics &amp; Computer Science</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Industry Experience</h2>
+        <ul>
+          <li>Citigroup, Inc. — <b>Financial Reporting Director</b></li>
+          <li>Sempra Energy Trading, LLC — <b>Senior Financial Analyst</b></li>
+          <li>Prudential Insurance Company — <b>Internal Audit Consultant</b></li>
+          <li>P&amp;O Nedlloyd — <b>Managerial Accountant</b></li>
+          <li>Photo Sculptures — <b>Staff Accountant</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>Publications</h2>
+        <ul>
+          <li><i>Ethics in Accounting</i> — Journal of Finance and Accountancy</li>
+          <li><i>First-Year Seminar (FYS)—The Advantages That This Course Offers</i> — Journal of Education and Learning</li>
+          <li><i>Government Programs—Measuring the Total Costs and Benefits Created for Society</i> — Economics and Finance Review</li>
+          <li><i>Fair Value Accounting vs. Historical Cost Accounting</i> — Review of Business Information Systems</li>
+          <li><i>Engaging Accounting Students: How To Teach Principles of Accounting in Creative and Exciting Ways</i> — American Journal of Business Education</li>
+        </ul>
+        <p class="small">For full citations and links, please see the CV PDF.</p>
+      </div>
+
+      <div class="card">
+        <h2>Service &amp; Leadership</h2>
+        <ul>
+          <li>Deputy Chairperson</li>
+          <li>Committee on Academic Standing (CAS)</li>
+          <li>Department P&amp;B</li>
+          <li>Department Assessment Coordinator</li>
+          <li>Middle States Accreditation Steering Committee — Member &amp; Co-Chair</li>
+          <li>BCC Assessment Council</li>
+          <li>Supplemental Instruction (SI) Liaison</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>Honors</h2>
+        <ul>
+          <li>Summa Cum Laude — Lehman College</li>
+          <li>Dean’s List — Lehman College</li>
+          <li>Robert Kissel Memorial Award — Bronx Community College</li>
+          <li>Phi Beta Kappa — Bronx Community College</li>
+          <li>Golden Key National Honor Society — Bronx Community College</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Professional Development</h2>
+        <ul>
+          <li>Annual completion of 40 hours of Continuing Professional Education (CPE)</li>
+          <li>Federal Reserve Bank of New York tours (coordinated/attended)</li>
+          <li>ACBSP conferences (attended)</li>
+          <li>ACBSP reports (assisted with preparation)</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ===== End CV Sections ===== -->
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Email is the best way to reach me.</p>
+        <p>
+          <a class="btn" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Paul.Jaijairam@bcc.cuny.edu</a>
+        </p>
+        <p class="small">You can also add: office location, department page link, or office hours.</p>
+      </div>
+
+      <div class="card">
+        <h2>Download</h2>
+        <p>For a full list of publications, service, and professional history:</p>
+        <div class="btnrow">
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
 
     <footer>
       © <span id="y"></span> Paul Jaijairam • Built with a simple static site (fast, secure, free hosting)
