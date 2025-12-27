@@ -132,6 +132,42 @@
     .btn:hover{ background:#f1f5f9; text-decoration:none; }
 
     .small{ font-size:13px; }
+
+    /* ===== Full Bio Section Styles (embedded bio.html content) ===== */
+    .page-title{
+      font-size:26px;
+      margin:0 0 6px;
+      letter-spacing:.2px;
+      color:var(--text);
+    }
+
+    .divider{
+      border-top:1px solid rgba(0,0,0,.12);
+      margin-top:18px;
+      padding-top:14px;
+    }
+
+    .anchor-offset{
+      scroll-margin-top: 14px;
+    }
+
+    .two-col-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    @media (max-width: 640px){
+      .two-col-list{ grid-template-columns:1fr; }
+    }
+
+    .muted-note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
   </style>
 </head>
 
@@ -146,33 +182,38 @@
         <a class="btn" href="https://www.linkedin.com/in/pauljaijairam/" target="_blank" rel="noopener">View LinkedIn</a>
         <a class="pill" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email</a>
         <a class="pill" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        <<a class="pill" href="https://scholar.google.com/citations?user=ANZxzQgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=ANZxzQgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
       </nav>
     </header>
 
     <section class="grid">
-      <div class="card">
-      <h2>About Me</h2>
+      <div class="card" id="about">
+        <h2>About Me</h2>
 
-<p class="small" style="margin-bottom:12px; color:var(--muted);">
-  <em>Teaching, leadership, and service rooted in student success</em>
-</p>
+        <p class="small" style="margin-bottom:12px; color:var(--muted);">
+          <em>Teaching, leadership, and service rooted in student success</em>
+        </p>
 
-<p>
-I am a professor and Deputy Chairperson in the Department of Business &amp; Information Systems at Bronx Community College (CUNY), where I also coordinate the Accounting curriculum and program assessment. A proud BCC alumnus from the Class of 1989, I have spent more than three decades serving the institution that shaped my academic and professional journey.
-</p>
+        <p>
+          I am a professor and Deputy Chairperson in the Department of Business &amp; Information Systems at Bronx Community College (CUNY),
+          where I also coordinate the Accounting curriculum and program assessment. A proud BCC alumnus from the Class of 1989, I have spent
+          more than three decades serving the institution that shaped my academic and professional journey.
+        </p>
 
-<p>
-My teaching focuses on financial and intermediate accounting, with an emphasis on clarity, rigor, and real-world application. I am deeply committed to student success and to creating an engaging, supportive learning environment that helps students build confidence and practical skills for their future careers.
-</p>
+        <p>
+          My teaching focuses on financial and intermediate accounting, with an emphasis on clarity, rigor, and real-world application.
+          I am deeply committed to student success and to creating an engaging, supportive learning environment that helps students build
+          confidence and practical skills for their future careers.
+        </p>
 
-<p>
-In addition to teaching, I am actively involved in curriculum development, assessment, and accreditation efforts to ensure programs remain rigorous, relevant, and student-centered.
-</p>
+        <p>
+          In addition to teaching, I am actively involved in curriculum development, assessment, and accreditation efforts to ensure programs
+          remain rigorous, relevant, and student-centered.
+        </p>
 
-<p>
-  <a href="bio.html"><strong>Read more about my background and experience →</strong></a>
-</p>
+        <p>
+          <a href="#bio"><strong>Read more about my background and experience →</strong></a>
+        </p>
 
         <div class="btnrow">
           <a class="btn" href="#contact">Contact</a>
@@ -339,6 +380,127 @@ In addition to teaching, I am actively involved in curriculum development, asses
       </div>
     </section>
     <!-- ===== End CV Sections ===== -->
+
+    <!-- ========================================================= -->
+    <!-- ===== FULL BIO (embedded) — replaces separate bio.html ==== -->
+    <!-- ========================================================= -->
+    <section class="grid anchor-offset" id="bio" style="margin-top:16px;">
+      <div class="card" style="grid-column: 1 / -1;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+          <div>
+            <div class="page-title">Background &amp; Experience</div>
+            <p class="small" style="margin-top:0; color:var(--muted);">
+              <em>A fuller look at my work in teaching, leadership, and service at Bronx Community College</em>
+            </p>
+          </div>
+          <div class="btnrow" style="margin-top:0;">
+            <a class="btn" href="#about">Back to top</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Overview</h2>
+        <p>
+          I am a professor and Deputy Chairperson in the Department of Business &amp; Information Systems at Bronx Community College (CUNY),
+          where I also coordinate the Accounting curriculum and support program assessment efforts. I am also a proud Bronx Community College
+          alumnus from the Class of 1989, and I have spent more than three decades serving the institution that helped shape my academic and
+          professional journey.
+        </p>
+        <p>
+          My work is grounded in a simple goal: helping students move forward with confidence. Whether that is mastering a challenging accounting
+          concept, building stronger study habits, or mapping out a realistic academic and career plan, I try to bring clarity, structure, and
+          encouragement to the process.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Teaching</h2>
+        <p>
+          My teaching focuses primarily on financial and intermediate accounting, with an emphasis on clear reasoning, careful problem-solving,
+          and real-world application. I aim to create a learning environment that is supportive but rigorous—one where students are challenged,
+          but also feel that the path to improvement is visible and achievable.
+        </p>
+
+        <ul>
+          <li><strong>Instructional focus:</strong> fundamentals that scale into more advanced accounting work</li>
+          <li><strong>Classroom approach:</strong> step-by-step structure, practice-driven mastery, and active feedback</li>
+          <li><strong>Student support:</strong> consistent check-ins, review sessions, and guidance on academic habits</li>
+        </ul>
+
+        <p class="muted-note">
+          <em>
+            If you are a student: my goal is for you to leave the course more confident with intermediate-level accounting issues and better able
+            to read financial statements in greater depth.
+          </em>
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Leadership &amp; Department Service</h2>
+        <p>
+          In addition to teaching, I support department operations and long-term program strength through curriculum coordination, assessment,
+          and service. Much of this work happens behind the scenes, but it matters: it helps ensure that our courses are aligned, our outcomes
+          are measurable, and our programs remain relevant for students.
+        </p>
+
+        <ul class="two-col-list">
+          <li>Deputy Chairperson, Department of Business &amp; Information Systems</li>
+          <li>Accounting curriculum coordination</li>
+          <li>Program assessment support and documentation</li>
+          <li>Collaboration with faculty and staff on student success initiatives</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Program Assessment &amp; Continuous Improvement</h2>
+        <p>
+          I care deeply about assessment as a practical tool—not as paperwork. At its best, assessment helps us see what is working, where students
+          are struggling, and what changes will improve the learning experience. My approach is to keep it grounded, evidence-based, and usable
+          for faculty.
+        </p>
+
+        <ul>
+          <li><strong>Focus:</strong> clear outcomes, meaningful measures, and actionable results</li>
+          <li><strong>Goal:</strong> use findings to strengthen instruction and support students more effectively</li>
+          <li><strong>Mindset:</strong> keep processes simple, repeatable, and transparent</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Scholarship</h2>
+        <p>
+          I have published in peer-reviewed journals and value scholarship that stays connected to teaching, professional practice, and the
+          real needs of students and institutions.
+        </p>
+        <p class="muted-note">
+          <em>
+            If you’d like, we can add a “Publications (Selected)” section here later with clickable links (or a downloadable CV section).
+          </em>
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Why Bronx Community College Matters to Me</h2>
+        <p>
+          Bronx Community College is not just where I work—it is a place that shaped my life. As an alumnus, I understand the importance of
+          access, opportunity, and mentorship. I also understand that many students are balancing work, family responsibilities, and financial
+          pressure while trying to stay on track academically.
+        </p>
+        <p>
+          That reality shapes how I teach and how I lead. I try to be direct, fair, and consistent—and I try to make sure students feel seen,
+          supported, and capable of doing challenging work.
+        </p>
+
+        <div class="btnrow" style="margin-top:14px;">
+          <a class="btn" href="#about">Back to top</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END FULL BIO (embedded) ===== -->
 
     <section class="grid" style="margin-top:16px;">
       <div class="card" id="contact">
