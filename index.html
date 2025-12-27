@@ -8,7 +8,7 @@
 
   <style>
     /* ===== Soft Blue / Bright Academic Theme ===== */
-    :root {
+    :root{
       --bg:#eef2ff;
       --card:#ffffff;
       --text:#1e293b;
@@ -133,7 +133,7 @@
 
     .small{ font-size:13px; }
 
-    /* ===== Full Bio Section Styles (embedded bio.html content) ===== */
+    /* ===== Full Bio Section Styles (embedded) ===== */
     .page-title{
       font-size:26px;
       margin:0 0 6px;
@@ -147,9 +147,7 @@
       padding-top:14px;
     }
 
-    .anchor-offset{
-      scroll-margin-top: 14px;
-    }
+    .anchor-offset{ scroll-margin-top:14px; }
 
     .two-col-list{
       display:grid;
@@ -168,6 +166,54 @@
       font-size:13px;
       line-height:1.45;
     }
+
+    /* ===== Teaching Philosophy Toggle ===== */
+    details.tp{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#f9fafb;
+      padding:12px 12px;
+      margin-top:12px;
+    }
+    details.tp summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-weight:700;
+      color:var(--text);
+      user-select:none;
+    }
+    details.tp summary::-webkit-details-marker{ display:none; }
+    .chev{
+      display:inline-flex;
+      width:28px; height:28px;
+      align-items:center; justify-content:center;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      flex:0 0 auto;
+      transition:transform .18s ease;
+    }
+    details.tp[open] .chev{ transform:rotate(180deg); }
+    .tp-content{
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px solid rgba(0,0,0,.10);
+    }
+    .tp-content h3{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:.2px;
+      color:var(--text);
+    }
+    .sig{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
   </style>
 </head>
 
@@ -178,8 +224,13 @@
         <h1 class="name">Paul Jaijairam</h1>
         <div class="tag">Professor • Business &amp; Information Systems • Bronx Community College (CUNY)</div>
       </div>
+
       <nav class="toplinks">
         <a class="btn" href="https://www.linkedin.com/in/pauljaijairam/" target="_blank" rel="noopener">View LinkedIn</a>
+
+        <!-- Full Bio pill (jumps to embedded bio section) -->
+        <a class="pill" href="#bio">Full Bio</a>
+
         <a class="pill" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email</a>
         <a class="pill" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
         <a class="pill" href="https://scholar.google.com/citations?user=ANZxzQgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
@@ -225,7 +276,7 @@
       <aside class="card">
         <h2>Quick facts</h2>
         <div class="kvs">
-          <div class="kv"><b>Role</b><span>Professor, Deputy Chairperson & Accounting Coordinator</span></div>
+          <div class="kv"><b>Role</b><span>Professor, Deputy Chairperson &amp; Accounting Coordinator</span></div>
           <div class="kv"><b>Institution</b><span>Bronx Community College (CUNY)</span></div>
 
           <div class="kv">
@@ -310,7 +361,9 @@
       <div class="card">
         <h2>Academic Experience</h2>
         <ul>
-          <li>Bronx Community College (CUNY) — <b>Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Associate Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Assistant Professor</b></li>
+          <li>Bronx Community College (CUNY) — <b>Adjunct Assistant Professor</b></li>
           <li>Bronx Community College (CUNY) — <b>Adjunct Lecturer</b>, Business &amp; Information Systems</li>
           <li>Bronx Community College (CUNY) — <b>Adjunct Lecturer</b>, Mathematics &amp; Computer Science</li>
         </ul>
@@ -380,7 +433,7 @@
     <!-- ===== End CV Sections ===== -->
 
     <!-- ========================================================= -->
-    <!-- ===== FULL BIO (embedded) — replaces separate bio.html ==== -->
+    <!-- ===================== FULL BIO ========================== -->
     <!-- ========================================================= -->
     <section class="grid anchor-offset" id="bio" style="margin-top:16px;">
       <div class="card" style="grid-column: 1 / -1;">
@@ -433,6 +486,76 @@
             to read financial statements in greater depth.
           </em>
         </p>
+
+        <!-- ===== NEW: Teaching Philosophy (excerpt + collapsible full statement) ===== -->
+        <h2 style="margin-top:16px;">Teaching Philosophy</h2>
+
+        <p class="small" style="margin-bottom:10px; color:var(--muted);">
+          <em>A quick snapshot of how I teach, and what students can expect.</em>
+        </p>
+
+        <p>
+          My teaching philosophy centers on the belief that students deserve clear, engaging instruction within a supportive learning environment.
+          I emphasize active participation, collaboration, and consistent interaction with both peers and the instructor.
+          I use a teaching framework I developed called <strong>Learn, Understand, then Do (LUD)</strong>, which guides students from foundational
+          knowledge, to conceptual understanding, and finally to practical application.
+        </p>
+
+        <details class="tp">
+          <summary>
+            Read the full teaching philosophy statement
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+
+          <div class="tp-content">
+            <h3>Full Statement</h3>
+
+            <p>
+              My teaching philosophy is grounded in the belief that students deserve exceptional instruction within an engaging and dynamic learning
+              environment. I strive to create a classroom experience where students actively participate, collaborate with one another, and feel
+              comfortable engaging with the instructor.
+            </p>
+
+            <p>
+              I firmly believe that with willingness, focus, and determination to achieve their goals—combined with a teacher who prioritizes student
+              needs—students can achieve meaningful academic success. My role is to provide structure, clarity, and guidance while encouraging students
+              to take ownership of their learning.
+            </p>
+
+            <p>
+              To support this process, I use a teaching framework I developed called <strong>Learn, Understand, then Do (LUD)</strong>. This approach
+              emphasizes a structured progression in learning:
+            </p>
+
+            <ul>
+              <li><strong>Learn</strong> — Students begin by acquiring foundational knowledge through lectures, readings, and guided instruction.</li>
+              <li><strong>Understand</strong> — Students then deepen their comprehension by analyzing concepts, asking questions, and connecting ideas.</li>
+              <li><strong>Do</strong> — Finally, students apply what they have learned through problem-solving, practical examples, and real-world scenarios.</li>
+            </ul>
+
+            <p>
+              The LUD approach reinforces learning by combining theory with application, helping students move beyond memorization toward true understanding
+              and skill development.
+            </p>
+
+            <p>
+              My sincere goal is for every student to succeed. To accomplish this, I encourage students to be proactive and immersed in the learning
+              process. If confusion or challenges arise, I urge students to reach out early—whether through in-person conversations or email communication.
+              I also encourage collaboration among students so they can support one another throughout the semester.
+            </p>
+
+            <p>
+              While I am fully invested in each student’s success, meaningful progress requires initiative from the student as well. Addressing questions
+              and concerns early leads to stronger understanding, greater confidence, and a more positive learning and assessment experience.
+            </p>
+
+            <div class="sig">
+              <strong>Prof. Paul Jaijairam</strong>, Deputy Chairperson<br />
+              Department of Business &amp; Information Systems
+            </div>
+          </div>
+        </details>
+        <!-- ===== END NEW Teaching Philosophy ===== -->
 
         <div class="divider"></div>
 
@@ -498,7 +621,7 @@
         </div>
       </div>
     </section>
-    <!-- ===== END FULL BIO (embedded) ===== -->
+    <!-- =================== END FULL BIO ======================= -->
 
     <section class="grid" style="margin-top:16px;">
       <div class="card" id="contact">
