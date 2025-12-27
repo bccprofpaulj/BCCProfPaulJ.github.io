@@ -7,7 +7,9 @@
   <meta name="description" content="Paul Jaijairam — Professor, Department of Business & Information Systems, Bronx Community College (CUNY)." />
 
   <style>
-    /* ===== Soft Blue / Bright Academic Theme ===== */
+    /* =======================================================================
+       Soft Blue / Bright Academic Theme
+       ======================================================================= */
     :root{
       --bg:#eef2ff;
       --card:#ffffff;
@@ -133,7 +135,9 @@
 
     .small{ font-size:13px; }
 
-    /* ===== Full Bio Section Styles (embedded) ===== */
+    /* =======================================================================
+       Full Bio Section Styles (embedded)
+       ======================================================================= */
     .page-title{
       font-size:26px;
       margin:0 0 6px;
@@ -167,7 +171,9 @@
       line-height:1.45;
     }
 
-    /* ===== Teaching Philosophy Toggle ===== */
+    /* =======================================================================
+       Teaching Philosophy Toggle (existing)
+       ======================================================================= */
     details.tp{
       border:1px solid var(--line);
       border-radius:14px;
@@ -214,11 +220,135 @@
       font-size:13px;
       margin-top:10px;
     }
+
+    /* =======================================================================
+       NEW: Student FAQ Toggle (matches current design)
+       ======================================================================= */
+    details.faq{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#f9fafb;
+      padding:12px 12px;
+      margin-top:12px;
+    }
+    details.faq summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-weight:800;
+      color:var(--text);
+      user-select:none;
+    }
+    details.faq summary::-webkit-details-marker{ display:none; }
+    details.faq[open] .chev{ transform:rotate(180deg); }
+
+    .faq-content{
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px solid rgba(0,0,0,.10);
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width: 840px){
+      .faq-grid{ grid-template-columns:1fr; }
+    }
+
+    .faq-q{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      padding:12px 12px;
+    }
+    .faq-q b{
+      display:block;
+      color:var(--text);
+      margin-bottom:6px;
+      font-size:13.5px;
+      letter-spacing:.1px;
+    }
+    .faq-q p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .faq-subhead{
+      margin:12px 0 6px;
+      color:var(--text);
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.1px;
+    }
+
+    /* Nested toggles inside FAQ (first-year vs advanced) */
+    details.faq-nested{
+      border:1px dashed rgba(0,0,0,.15);
+      border-radius:14px;
+      background:#fff;
+      padding:10px 10px;
+      margin-top:10px;
+    }
+    details.faq-nested summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      font-weight:800;
+      color:var(--text);
+      user-select:none;
+    }
+    details.faq-nested summary::-webkit-details-marker{ display:none; }
+    details.faq-nested[open] .chev{ transform:rotate(180deg); }
+
+    .faq-note{
+      margin:10px 0 0;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#ffffff;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .faq-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    /* =======================================================================
+       Print styles (optional: print-friendly in browser)
+       ======================================================================= */
+    @media print{
+      .toplinks, .btnrow, .btn, .pill, .faq-actions{ display:none !important; }
+      body{ background:#fff; }
+      .card{ box-shadow:none; }
+      a{ color:#000; text-decoration:none; }
+      details{ border:1px solid #ccc; }
+      details[open] .chev{ transform:none; }
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
+
+    <!-- =========================================================
+         Header
+         ========================================================= -->
     <header>
       <div>
         <h1 class="name">Paul Jaijairam</h1>
@@ -231,12 +361,21 @@
         <!-- Full Bio pill (jumps to embedded bio section) -->
         <a class="pill" href="#bio">Full Bio</a>
 
+        <!-- NEW: Student FAQ pill (jumps to FAQ inside bio) -->
+        <a class="pill" href="#student-faq">Student FAQ</a>
+
+        <!-- NEW: Printable PDF pill (make sure the PDF exists in your repo root) -->
+        <a class="pill" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">FAQ (PDF)</a>
+
         <a class="pill" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email</a>
         <a class="pill" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
         <a class="pill" href="https://scholar.google.com/citations?user=ANZxzQgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
       </nav>
     </header>
 
+    <!-- =========================================================
+         About + Quick facts
+         ========================================================= -->
     <section class="grid">
       <div class="card" id="about">
         <h2>About Me</h2>
@@ -297,7 +436,9 @@
       </aside>
     </section>
 
-    <!-- ===== News & Recognition ===== -->
+    <!-- =========================================================
+         News & Recognition
+         ========================================================= -->
     <section class="grid" style="margin-top:16px;">
       <div class="card">
         <h2>News &amp; Recognition</h2>
@@ -324,9 +465,10 @@
         </p>
       </div>
     </section>
-    <!-- ===== End News & Recognition ===== -->
 
-    <!-- ===== CV Sections ===== -->
+    <!-- =========================================================
+         CV Sections
+         ========================================================= -->
     <section class="grid" style="margin-top:16px;">
       <div class="card">
         <h2>Education</h2>
@@ -428,13 +570,13 @@
         </ul>
       </div>
     </section>
-    <!-- ===== End CV Sections ===== -->
 
     <!-- ========================================================= -->
     <!-- ===================== FULL BIO ========================== -->
     <!-- ========================================================= -->
     <section class="grid anchor-offset" id="bio" style="margin-top:16px;">
       <div class="card" style="grid-column: 1 / -1;">
+
         <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;">
           <div>
             <div class="page-title">Background &amp; Experience</div>
@@ -457,6 +599,7 @@
           alumnus from the Class of 1989, and I have spent more than three decades serving the institution that helped shape my academic and
           professional journey.
         </p>
+
         <p>
           My work is grounded in a simple goal: helping students move forward with confidence. Whether that is mastering a challenging accounting
           concept, building stronger study habits, or mapping out a realistic academic and career plan, I try to bring clarity, structure, and
@@ -485,7 +628,9 @@
           </em>
         </p>
 
-        <!-- ===== NEW: Teaching Philosophy (excerpt + collapsible full statement) ===== -->
+        <!-- ========================================================= -->
+        <!-- Teaching Philosophy (excerpt + collapsible full statement) -->
+        <!-- ========================================================= -->
         <h2 style="margin-top:16px;">Teaching Philosophy</h2>
 
         <p class="small" style="margin-bottom:10px; color:var(--muted);">
@@ -553,8 +698,184 @@
             </div>
           </div>
         </details>
-        <!-- ===== END NEW Teaching Philosophy ===== -->
 
+        <!-- ========================================================= -->
+        <!-- NEW: Student FAQ (collapsible + course-level variants)     -->
+        <!-- ========================================================= -->
+        <h2 id="student-faq" style="margin-top:18px;">Student FAQ: What to Expect in My Classes</h2>
+
+        <p class="small" style="margin-bottom:10px; color:var(--muted);">
+          <em>Clear expectations + real support. I’m here to help you succeed — and I also expect you to be accountable.</em>
+        </p>
+
+        <div class="faq-actions">
+          <a class="btn" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Download printable FAQ (PDF)</a>
+          <a class="btn" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email questions</a>
+        </div>
+
+        <details class="faq">
+          <summary>
+            Read the Student FAQ (“What to expect in my classes”)
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+
+          <div class="faq-content">
+
+            <div class="faq-note">
+              <strong>Quick mindset:</strong> You don’t have to be “perfect” to do well — but you do have to be consistent.
+              Read before class, show up, ask questions early, and use support (office hours/tutoring) when needed.
+            </div>
+
+            <!-- Core FAQs (universal across courses) -->
+            <div class="faq-grid">
+
+              <div class="faq-q">
+                <b>1) What should I do before coming to class?</b>
+                <p>
+                  Read the assigned chapter <strong>before</strong> class. Class time is designed to reinforce, clarify, and apply what you read—
+                  not introduce it for the first time. Come in ready to participate.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>2) Is attendance really important?</b>
+                <p>
+                  Yes. Each session builds on the last. When you miss class, you miss explanations, examples, and patterns that help concepts “click.”
+                  Attendance is one of the strongest predictors of success.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>3) What do you expect from me during class?</b>
+                <p>
+                  Active participation: follow steps, attempt problems, ask questions, and stay engaged. You’re not here to watch accounting—you’re
+                  here to do it.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>4) What if I’m confused?</b>
+                <p>
+                  Reach out early. Don’t wait until after an exam. Confusion is normal—<em>silence</em> is what creates problems. Ask in class,
+                  email me, come to office hours, or use tutoring.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>5) How often can I email you?</b>
+                <p>
+                  As often as needed—especially if you are actively working and have specific questions. Clear communication is part of being successful.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>6) Are office hours only for students who are struggling?</b>
+                <p>
+                  Not at all. Office hours are for anyone who wants clarity, stronger habits, better exam preparation, or guidance about programs and careers.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>7) When should I use tutoring?</b>
+                <p>
+                  Use tutoring if you feel consistently unsure, if your quiz/exam results show gaps, or if I recommend it. Tutoring is proactive—not a last resort.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>8) What if I miss a class?</b>
+                <p>
+                  It’s your responsibility to catch up. Exchange contact information with classmates early. Get notes, review posted materials, then email me
+                  if questions remain.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>9) How should I prepare for exams?</b>
+                <p>
+                  Rework practice problems <strong>without</strong> looking at solutions. If you can explain each step and why it’s done, you’re ready.
+                  If you’re only memorizing, you’re not.
+                </p>
+              </div>
+
+              <div class="faq-q">
+                <b>10) What do you mean by student accountability?</b>
+                <p>
+                  I will support you fully—but you must do your part: prepare, attend, participate, and communicate early when you need help. This is how real progress happens.
+                </p>
+              </div>
+
+            </div><!-- /faq-grid -->
+
+            <!-- Course-level variants -->
+            <div class="faq-subhead">Course-level expectations (choose the one that applies)</div>
+
+            <details class="faq-nested">
+              <summary>
+                First-Year / Principles courses (ACC 111 / ACC 112): what matters most
+                <span class="chev" aria-hidden="true">⌄</span>
+              </summary>
+
+              <div class="tp-content">
+                <p>
+                  In first-year accounting, your biggest job is building strong habits and a strong foundation. Small gaps can grow quickly if ignored.
+                  Success comes from consistency.
+                </p>
+
+                <ul>
+                  <li><strong>Read before class</strong> so you recognize terms and steps (accounting is a new language at first).</li>
+                  <li><strong>Practice frequently</strong> (short practice sessions beat cramming every time).</li>
+                  <li><strong>Focus on the “why”</strong>, not just the final answer.</li>
+                  <li><strong>Use tutoring early</strong> if you feel lost—don’t wait until you “fall behind.”</li>
+                  <li><strong>Ask questions out loud</strong> (many students have the same question).</li>
+                </ul>
+
+                <div class="faq-note">
+                  <strong>Simple rule:</strong> if you’re not sure about a topic, address it the same week it’s taught.
+                </div>
+              </div>
+            </details>
+
+            <details class="faq-nested">
+              <summary>
+                Intermediate / Advanced courses: what changes (and what doesn’t)
+                <span class="chev" aria-hidden="true">⌄</span>
+              </summary>
+
+              <div class="tp-content">
+                <p>
+                  Intermediate/advanced accounting moves faster and requires more judgment. You’ll see multi-step problems and deeper analysis, and the
+                  “details” matter. Reading and preparation become even more important.
+                </p>
+
+                <ul>
+                  <li><strong>Pre-class reading is non-negotiable</strong> — class is where we apply and analyze.</li>
+                  <li><strong>Bring questions</strong> (even short ones). Questions are evidence of preparation.</li>
+                  <li><strong>Expect multi-step work</strong> — you must show reasoning, not just answers.</li>
+                  <li><strong>Practice exam-style problems</strong> under time constraints.</li>
+                  <li><strong>Use office hours strategically</strong> for deeper topics and study planning.</li>
+                </ul>
+
+                <div class="faq-note">
+                  <strong>Simple rule:</strong> if you can explain your steps clearly, you are building the skill level the course requires.
+                </div>
+              </div>
+            </details>
+
+            <!-- LUD tie-in -->
+            <div class="faq-note" style="margin-top:12px;">
+              <strong>How this ties to LUD:</strong>
+              <em>Learn</em> by reading before class,
+              <em>Understand</em> through class discussion and questions,
+              and <em>Do</em> through practice problems, tutoring, office hours, and exam preparation.
+            </div>
+
+          </div><!-- /faq-content -->
+        </details>
+
+        <!-- ========================================================= -->
+        <!-- Back to regular bio content                               -->
+        <!-- ========================================================= -->
         <div class="divider"></div>
 
         <h2>Leadership &amp; Department Service</h2>
@@ -617,10 +938,13 @@
           <a class="btn" href="#contact">Contact</a>
           <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         </div>
+
       </div>
     </section>
-    <!-- =================== END FULL BIO ======================= -->
 
+    <!-- =========================================================
+         Contact + Download
+         ========================================================= -->
     <section class="grid" style="margin-top:16px;">
       <div class="card" id="contact">
         <h2>Contact</h2>
@@ -628,7 +952,9 @@
         <p>
           <a class="btn" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Paul.Jaijairam@bcc.cuny.edu</a>
         </p>
-        <p class="small">You can also add: office location, department page link, or office hours.</p>
+        <p class="small">
+          You can also add: office location, department page link, or office hours.
+        </p>
       </div>
 
       <div class="card">
@@ -636,13 +962,15 @@
         <p>For a full list of publications, service, and professional history:</p>
         <div class="btnrow">
           <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          <a class="btn" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Student FAQ (PDF)</a>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="y"></span> Paul Jaijairam • Built with a simple static site (fast, secure, free hosting)
+      © <span id="y"></span> Paul Jaijairam • Built with a simplemple static site (fast, secure, free hosting)
     </footer>
+
   </div>
 
   <script>
