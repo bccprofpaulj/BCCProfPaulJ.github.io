@@ -6,16 +6,7 @@
   <title>Paul Jaijairam | Professor & Academic Leader</title>
   <meta name="description" content="Paul Jaijairam - Professor, Department of Business & Information Systems, Bronx Community College (CUNY)." />
 
-  
-<meta property="og:title" content="Paul Jaijairam | Professor & Academic Leader" />
-  <meta property="og:description" content="Professor, Department of Business & Information Systems, Bronx Community College (CUNY). Teaching, leadership, and service rooted in student success." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bccprofpaulj.github.io/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Paul Jaijairam | Professor & Academic Leader" />
-  <meta name="twitter:description" content="Professor, Department of Business & Information Systems, Bronx Community College (CUNY)." />
-
-<style>
+  <style>
     /* =======================================================================
        Soft Blue / Bright Academic Theme
        ======================================================================= */
@@ -24,8 +15,11 @@
       --card:#ffffff;
       --text:#1e293b;
       --muted:#475569;
-      --link:#2563eb;
+      --link:var(--accent);
+      --link2:#2563eb;
       --line:#c7d2fe;
+      --accent:#145A43;
+      --accent2:#B08D57;
     }
 
     *{ box-sizing:border-box; }
@@ -40,29 +34,14 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
-    
+    /* Accent focus ring */
+    a:focus, button:focus, summary:focus, .btn:focus, .pill:focus{
+      outline:3px solid rgba(20,90,67,.25);
+      outline-offset:2px;
+    }
 
-    /* Skip link for keyboard users */
-    .skip-link{
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
-    .skip-link:focus{
-      left:18px;
-      top:18px;
-      width:auto;
-      height:auto;
-      padding:10px 12px;
-      background:#ffffff;
-      border:1px solid var(--line);
-      border-radius:12px;
-      z-index:9999;
-    }
-.wrap{ max-width:980px; margin:0 auto; padding:42px 18px 64px; }
+
+    .wrap{ max-width:980px; margin:0 auto; padding:42px 18px 64px; }
 
     header{
       display:flex;
@@ -81,7 +60,7 @@
       display:inline-flex;
       align-items:center;
       padding:10px 12px;
-      border:1px solid var(--line);
+      border:1px solid rgba(20,90,67,.25);
       border-radius:999px;
       background:#f8fafc;
     }
@@ -101,6 +80,7 @@
       border:1px solid var(--line);
       background:var(--card);
       border-radius:16px;
+      border-top:3px solid rgba(20,90,67,.20);
       padding:18px 18px;
       box-shadow: 0 10px 28px rgba(0,0,0,.08);
     }
@@ -158,11 +138,11 @@
       justify-content:center;
       padding:10px 12px;
       border-radius:12px;
-      border:1px solid var(--line);
+      border:1px solid rgba(20,90,67,.25);
       background:#ffffff;
       color:var(--text);
     }
-    .btn:hover{ background:#f1f5f9; text-decoration:none; }
+    .btn:hover{ background:rgba(20,90,67,.06); text-decoration:none; }
 
     .small{ font-size:13px; }
 
@@ -177,7 +157,7 @@
     }
 
     .divider{
-      border-top:1px solid rgba(0,0,0,.12);
+      border-top:1px solid rgba(20,90,67,.18);
       margin-top:18px;
       padding-top:14px;
     }
@@ -346,6 +326,7 @@
       margin:10px 0 0;
       padding:10px 12px;
       border:1px solid var(--line);
+      border-left:4px solid rgba(20,90,67,.22);
       border-radius:14px;
       background:#ffffff;
       color:var(--muted);
@@ -375,7 +356,6 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="wrap">
 
     <!-- =========================================================
@@ -387,7 +367,7 @@
         <div class="tag">Professor • Business &amp; Information Systems • Bronx Community College (CUNY)</div>
       </div>
 
-      <nav class="toplinks" aria-label="Primary">
+      <nav class="toplinks">
         <a class="btn" href="https://www.linkedin.com/in/pauljaijairam/" target="_blank" rel="noopener">View LinkedIn</a>
 
         <!-- Full Bio pill (jumps to embedded bio section) -->
@@ -397,10 +377,10 @@
         <a class="pill" href="#student-faq">Student FAQ</a>
 
         <!-- NEW: Printable PDF pill (make sure the PDF exists in your repo root) -->
-        <a class="pill" href="./Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">FAQ (PDF)</a>
+        <a class="pill" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">FAQ (PDF)</a>
 
         <a class="pill" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email</a>
-        <a class="pill" href="./Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a class="pill" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
         <a class="pill" href="https://scholar.google.com/citations?user=ANZxzQgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
       </nav>
     </header>
@@ -408,8 +388,6 @@
     <!-- =========================================================
          About + Quick facts
          ========================================================= -->
-    <main id="main">
-
     <section class="grid">
       <div class="card" id="about">
         <h2>About Me</h2>
@@ -441,7 +419,7 @@
 
         <div class="btnrow">
           <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="./Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV</a>
           <a class="btn" href="https://www.linkedin.com/in/pauljaijairam/" target="_blank" rel="noopener">View LinkedIn</a>
         </div>
       </div>
@@ -464,7 +442,10 @@
 
           <div class="kv"><b>Location</b><span>Bronx, NY</span></div>
         </div>
-</aside>
+        <p class="small" style="margin-top:12px;">
+          Tip: add “Office hours” or a Calendly link here if you want students to book time.
+        </p>
+      </aside>
     </section>
 
     <!-- =========================================================
@@ -492,7 +473,7 @@
         </p>
         <p class="small">
           - From the BCC announcement of the inaugural “Full Circle” Award.
-          <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">BCC story</a>
+          <a href="https://www.bcc.cuny.edu/recognizing-the-contributions-of-bccs-alumni-staff-and-faculty/" target="_blank" rel="noopener">Source</a>
         </p>
       </div>
     </section>
@@ -525,7 +506,7 @@
         </ul>
 
         <div class="btnrow" style="margin-top:12px;">
-          <a class="btn" href="./Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download Full CV</a>
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download Full CV</a>
         </div>
       </div>
     </section>
@@ -572,7 +553,7 @@
           <li>Committee on Academic Standing (CAS)</li>
           <li>Department P&amp;B</li>
           <li>Department Assessment Coordinator</li>
-          <li>Middle States Accreditation Steering Committee - Member &amp; Co-Chair</li>
+          <li>Middle States Accreditation Steering Committee — Member &amp; Co-Chair</li>
           <li>BCC Assessment Council</li>
           <li>Supplemental Instruction (SI) Liaison</li>
         </ul>
@@ -642,7 +623,7 @@
         <h2>Teaching</h2>
         <p>
           My teaching focuses primarily on financial and intermediate accounting, with an emphasis on clear reasoning, careful problem-solving,
-          and real-world application. I aim to create a learning environment that is supportive but rigorous-one where students are challenged,
+          and real-world application. I aim to create a learning environment that is supportive but rigorous—one where students are challenged,
           but also feel that the path to improvement is visible and achievable.
         </p>
 
@@ -739,18 +720,8 @@
           <em>Clear expectations + real support. I’m here to help you succeed - and I also expect you to be accountable.</em>
         </p>
 
-        
-<div class="faq-note" style="margin-top:12px;">
-          <strong>Start here:</strong>
-          <ul style="margin:8px 0 0; padding-left:18px;">
-            <li>Attend class and keep up week to week.</li>
-            <li>Read before class and practice after class.</li>
-            <li>Communicate early if something is getting in the way.</li>
-          </ul>
-        </div>
-
-<div class="faq-actions">
-          <a class="btn" href="./Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Download printable FAQ (PDF)</a>
+        <div class="faq-actions">
+          <a class="btn" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Download printable FAQ (PDF)</a>
           <a class="btn" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Email questions</a>
         </div>
 
@@ -952,13 +923,20 @@
 
         <h2>Scholarship</h2>
         <p>
-          I have published in peer-reviewed journals and value scholarship that connects to teaching, professional practice, and the real needs of students and institutions.
+          I have published in peer-reviewed journals and value scholarship that stays connected to teaching, professional practice, and the
+          real needs of students and institutions.
         </p>
-<div class="divider"></div>
+        <p class="muted-note">
+          <em>
+            If you’d like, we can add a “Publications (Selected)” section here later with clickable links (or a downloadable CV section).
+          </em>
+        </p>
+
+        <div class="divider"></div>
 
         <h2>Why Bronx Community College Matters to Me</h2>
         <p>
-          Bronx Community College is not just where I work-it is a place that shaped my life. As an alumnus, I understand the importance of
+          Bronx Community College is not just where I work—it is a place that shaped my life. As an alumnus, I understand the importance of
           access, opportunity, and mentorship. I also understand that many students are balancing work, family responsibilities, and financial
           pressure while trying to stay on track academically.
         </p>
@@ -970,7 +948,7 @@
         <div class="btnrow" style="margin-top:14px;">
           <a class="btn" href="#about">Back to top</a>
           <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="./Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         </div>
 
       </div>
@@ -986,20 +964,8 @@
         <p>
           <a class="btn" href="mailto:Paul.Jaijairam@bcc.cuny.edu">Paul.Jaijairam@bcc.cuny.edu</a>
         </p>
-
-        <div class="kvs" style="margin-top:10px;">
-          <div class="kv">
-            <b>Office hours</b>
-            <span>Posted in Brightspace and shared in class (or by appointment).</span>
-          </div>
-          <div class="kv">
-            <b>Office location</b>
-            <span>Bronx Community College (CUNY) - Department of Business &amp; Information Systems.</span>
-          </div>
-        </div>
-
-        <p class="small" style="margin-top:12px;">
-          I typically respond within 24-48 hours on weekdays. If something is time-sensitive, please mention it in the subject line.
+        <p class="small">
+          You can also add: office location, department page link, or office hours.
         </p>
       </div>
 
@@ -1007,16 +973,14 @@
         <h2>Download</h2>
         <p>For a full list of publications, service, and professional history:</p>
         <div class="btnrow">
-          <a class="btn" href="./Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-          <a class="btn" href="./Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Student FAQ (PDF)</a>
+          <a class="btn" href="Paul-Jaijairam-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          <a class="btn" href="Student-FAQ-What-to-Expect.pdf" target="_blank" rel="noopener">Student FAQ (PDF)</a>
         </div>
       </div>
     </section>
 
-    </main>
-
     <footer>
-      © <span id="y"></span> Paul Jaijairam • Built with a simple static site (fast, secure, free hosting)
+      © <span id="y"></span> Paul Jaijairam • Built with a simplemple static site (fast, secure, free hosting)
     </footer>
 
   </div>
